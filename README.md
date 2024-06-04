@@ -1,6 +1,6 @@
 # Scientific tagger
 
-![Build](https://img.shields.io/github/workflow/status/dataesr/scientific_tagger/Build)
+![Build](https://img.shields.io/github/actions/workflow/status/dataesr/scientific_tagger/build.yml?branch=main)
 ![Release](https://img.shields.io/github/v/release/dataesr/scientific_tagger)
 ![License](https://img.shields.io/github/license/dataesr/scientific_tagger)
 
@@ -13,16 +13,12 @@ The scientific taggers aims at proposing subject classification for scholarly pu
 ```shell
 git clone git@github.com:dataesr/scientific-tagger.git
 cd scientific-tagger
-docker-compose pull && docker-compose up
+docker compose pull && docker compose down && docker system prune -f && docker compose up
 ```
 
 In your browser, you now have :
 - scientific-tagger : http://localhost:5004/
 
-## Deploy it on kubernetes
-```shell
-kubectl apply -k k8s
-```
 
 ## Release
 It uses [semver](https://semver.org/).
